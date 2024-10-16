@@ -15,14 +15,13 @@ from select import select
 # LOCAL_DSN = "postgres://psycopg:psycopg@localhost/imdb"
 
 
-database = ""
-user = ""
-password = ""
-host = ""
-port = ""
-LOCAL_DSN = ""
-REMOTE_DSN = ""
-
+database = "imdb_ori"
+user = "postgres"
+password = "postgres"
+host = "pg_balsa"
+port = "5432"
+LOCAL_DSN = "postgres://postgres:postgres@pg_balsa/imdb_ori"
+REMOTE_DSN = "postgres://postgres:postgres@pg_balsa/imdb_ori"
 # TPC-H.
 # LOCAL_DSN = "postgres://psycopg:psycopg@localhost/tpch-sf10"
 # REMOTE_DSN = "postgres://psycopg:psycopg@localhost/tpch-sf10"

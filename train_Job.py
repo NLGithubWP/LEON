@@ -176,7 +176,7 @@ def load_sql_Files(sql_list: list):
     """
     sqllist = []
     for i in range(0, len(sql_list)):
-        sqlFiles = 'join-order-benchmark/' + sql_list[i] + '.sql'
+        sqlFiles = 'job_query_join/' + sql_list[i] + '.sql'
         if not os.path.exists(sqlFiles):
             raise IOError("File Not Exists!")
         sqllist.append(sqlFiles)
@@ -280,7 +280,7 @@ def getGMRL(sqls, modellist, pg_latency, nodeFeaturizer, costCache, workload, ex
     nodes = []
     for i in sqls:
         join_graph, all_join_conds, query_leaves, origin_dp_tables = DP.getPreCondition(
-            'join-order-benchmark/' + i + '.sql')
+            'job_query_join/' + i + '.sql')
         # TEST_left_prune_bayes
         bestplanhint, finnode = DP.dp.TEST_left_prune_bayes(join_graph, all_join_conds, query_leaves, origin_dp_tables,
                                                             workload,
@@ -652,9 +652,6 @@ if __name__ == '__main__':
                  "33a",
                  "33b",
                  "33c"]
-    trainquery = ['1a', '2a', '3a', '4a', '5a', '6a', '7a', '8a', '9a', '10a', '11a', '12a', '13a', '14a', '15a', '16a',
-                  '17a', '18a', '19a', '20a',
-                  '21a', '22a', '23a', '24a', '25a', '26a', '27a', '28a', '29a', '30a', '31a', '32a', '33a']
     # queries for test
     Ttrainquery = trainquery
     dp_Signs = [True for i in range(len(trainquery))]

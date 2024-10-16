@@ -147,7 +147,7 @@ class JoinOrderBenchmark(Workload):
         # Needs to be an absolute path for rllib.
         # module_dir = os.path.abspath(os.path.dirname(balsa.__file__) + '/../')
         #  p.query_dir = os.path.join('/home/ht/PycharmProjects/pythonProject3', 'join-order-benchmark')
-        p.query_dir = 'join-order-benchmark'
+        p.query_dir = 'job_query_join'
         if not os.path.exists(p.query_dir):
             raise IOError('File Not Exists!')
         return p
