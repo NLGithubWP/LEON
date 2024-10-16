@@ -176,7 +176,7 @@ def load_sql_Files(sql_list: list):
     """
     sqllist = []
     for i in range(0, len(sql_list)):
-        sqlFiles = 'job_query_join/' + sql_list[i] + '.sql'
+        sqlFiles = 'job_query_debug/' + sql_list[i] + '.sql'
         if not os.path.exists(sqlFiles):
             raise IOError("File Not Exists!")
         sqllist.append(sqlFiles)
@@ -280,7 +280,7 @@ def getGMRL(sqls, modellist, pg_latency, nodeFeaturizer, costCache, workload, ex
     nodes = []
     for i in sqls:
         join_graph, all_join_conds, query_leaves, origin_dp_tables = DP.getPreCondition(
-            'job_query_join/' + i + '.sql')
+            'job_query_debug/' + i + '.sql')
         # TEST_left_prune_bayes
         bestplanhint, finnode = DP.dp.TEST_left_prune_bayes(join_graph, all_join_conds, query_leaves, origin_dp_tables,
                                                             workload,
