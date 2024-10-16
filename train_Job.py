@@ -664,7 +664,7 @@ if __name__ == '__main__':
     trainsqls = load_sql(Ttrainsqllist)
     bestplandata = [[[] for _ in range(20)] for _ in range(len(trainquery))]
     bestplanslist = [[] for _ in range(len(sqls))]
-    iteration_num = 30
+    iteration_num = 1
 
     # initial timeout and it will update in dp
     timeoutlist = setInitialTimeout(sqls, dropbuffer, testtime=3)
@@ -747,7 +747,7 @@ if __name__ == '__main__':
             temtrainpair = copy.deepcopy(trainpair[modelnum])
             if len(temtrainpair) < 2:
                 continue
-            for epoch in range(0, 500):
+            for epoch in range(0, 1):
                 ttime = time.time()
                 shuffled_indices = np.random.permutation(len(temtrainpair))
                 # train
