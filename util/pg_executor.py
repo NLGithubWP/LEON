@@ -18,10 +18,10 @@ from select import select
 database = "imdb_ori"
 user = "postgres"
 password = "postgres"
-host = "pg_balsa"
+host = "172.26.187.139"
 port = "5432"
-LOCAL_DSN = "postgres://postgres:postgres@pg_balsa/imdb_ori"
-REMOTE_DSN = "postgres://postgres:postgres@pg_balsa/imdb_ori"
+LOCAL_DSN = "postgres://postgres:postgres@172.26.187.139/imdb_ori"
+REMOTE_DSN = "postgres://postgres:postgres@172.26.187.139/imdb_ori"
 # TPC-H.
 # LOCAL_DSN = "postgres://psycopg:psycopg@localhost/tpch-sf10"
 # REMOTE_DSN = "postgres://psycopg:psycopg@localhost/tpch-sf10"
