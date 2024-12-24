@@ -2084,8 +2084,7 @@ class DynamicProgramming(object):
                     else:
                         costlist = dp_costs
                     for i in range(0, len(costlist)):
-                        if join_ids not in dp_table or dp_table[join_ids][
-                            0] > costlist[i]:
+                        if join_ids not in dp_table or dp_table[join_ids][0] > costlist[i]:
                             if (FirstTrain or dpsign) and level > num_rels - 4:
                                 tem = []
                                 tem.append(dp_costs[i])
